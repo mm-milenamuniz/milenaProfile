@@ -1,0 +1,247 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Estilos para a versão desktop e tablets */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #A6D9E5;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 18px;
+    color: #333;
+}
+
+.header-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 40px;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.profile-info h3 {
+    font-size: 22px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.profile-info p {
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.resume-btn {
+    background-color: #CFE6A8;
+}
+
+.research-btn {
+    background-color: #F7CC82;
+}
+
+.outreach-btn {
+    background-color: #A6D9E5;
+}
+
+.personal-btn {
+    background-color: #CFCFCF;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+hr {
+    border: 0px;
+    border-bottom: dotted 0.5px #666;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ... (restante do seu CSS anterior) ... */
+
+/* ================================
+   Adicionando media queries para smartphones
+   ================================= */
+
+   @media only screen and (max-width: 768px) {
+    /* Ajusta o layout do header no celular */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .header-right {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-right a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    /* Ajuste do layout de perfil */
+    .profile {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-info h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .profile-info h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .profile-info p {
+        max-width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    /* Ajustes dos botões */
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Mudando para coluna */
+        align-items: center; /* Centraliza os botões */
+        justify-content: center; /* Garante que os botões fiquem centralizados */
+        margin-top: 20px; /* Margem para espaçamento */
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px 0;
+        width: 80%;
+        max-width: 300px;
+        text-align: center; /* Centraliza o texto dentro dos botões */
+    }
+
+    /* Ajustando o modal para telas menores */
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+    }
+}
